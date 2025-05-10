@@ -189,7 +189,6 @@
     <Content Include="lib\x64\SDL3_test.lib" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Constants.h" />
     <ClInclude Include="include\SDL3\SDL.h" />
     <ClInclude Include="include\SDL3\SDL_assert.h" />
     <ClInclude Include="include\SDL3\SDL_asyncio.h" />
