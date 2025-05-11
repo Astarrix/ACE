@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21ce3860-45fe-4082-89ec-23f85dcab7e5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +142,10 @@
       <workItem from="1746905812775" duration="13775000" />
       <workItem from="1746920132181" duration="28000" />
       <workItem from="1746920201581" duration="55000" />
+      <workItem from="1746920296676" duration="18000" />
+      <workItem from="1746920328754" duration="69000" />
+      <workItem from="1746957958772" duration="19000" />
+      <workItem from="1746958510859" duration="478000" />
     </task>
     <servers />
   </component>
