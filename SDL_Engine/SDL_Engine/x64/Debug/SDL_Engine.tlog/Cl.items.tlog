@@ -1,2 +1,7 @@
-X:\Github\ACE\SDL_Engine\SDL_Engine\SDL_Engine.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\SDL_Engine.obj
-X:\Github\ACE\SDL_Engine\SDL_Engine\ACE_WindowManager.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\ACE_WindowManager.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\ACE.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\ACE.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Managers\ACE_WindowManager.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\ACE_WindowManager.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Managers\GameScreenManager.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreenManager.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Screens\GameScreen.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreen.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Screens\SubScreens\GameScreen_L1.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreen_L1.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Screens\SubScreens\GameScreen_L2.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreen_L2.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Texture2D.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\Texture2D.obj

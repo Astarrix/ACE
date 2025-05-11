@@ -59,24 +59,11 @@ public:
      * @return true if renderer creation was successful, false otherwise
      */
     bool CreateRenderer();
-    
-    /**
-     * @brief Loads a texture from a file
-     * @param path The file path to the image to load
-     * @return Pointer to the created SDL_Texture or nullptr if loading failed
-     */
-    SDL_Texture* LoadTextureFromFile(std::string path);
 
     /**
      * @brief Properly closes the window and cleans up all SDL resources
      */
     void CloseWindow();
-    
-    /**
-     * @brief Frees a texture from memory
-     * @param gTexture Reference to the texture pointer to free
-     */
-    void FreeTexture(SDL_Texture*& gTexture);
     
     /**
      * @brief Gets the current size of the window
@@ -95,14 +82,9 @@ public:
      * @return The current SDL renderer pointer
      */
     SDL_Renderer* GetRenderer() { return gameRenderer; }
-    
-    /**
-     * @brief Renders a texture to the current renderer
-     * @param gTexture The texture to render
-     * @param imageProperties The position and size of the texture to render
-     */
-    void Render(SDL_Texture* gTexture, intBox2D imageProperties);
 
+    void SetWindowTitle(const char* title);
+    void SetWindowSize(int width, int height);
 private:
     static constexpr int INIT_SCREEN_HEIGHT = 720;  /**< Default initial screen height */
     static constexpr int INIT_SCREEN_WIDTH = 1280;  /**< Default initial screen width */

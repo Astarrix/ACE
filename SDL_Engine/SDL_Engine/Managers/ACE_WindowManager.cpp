@@ -45,14 +45,14 @@ intBox2D ACE_WindowManager::GetWindowSize()
     return size;
 }
 
-void ACE_WindowManager::Render(SDL_Texture* gTexture, intBox2D imageProperties)
+void ACE_WindowManager::SetWindowTitle(const char* title)
 {
-    const SDL_FRect renderlocation = {float(imageProperties.x), float(imageProperties.y), float(imageProperties.width), float(imageProperties.height)};
-    
-    SDL_SetRenderDrawColor(GetRenderer(), 0XFF, 0XFF, 0XFF, 0XFF);
-    SDL_RenderClear(GetRenderer());
-    SDL_RenderTextureRotated(GetRenderer(), gTexture, nullptr, &renderlocation, 0, nullptr, SDL_FLIP_NONE);
-    SDL_RenderPresent(GetRenderer());
+    SDL_SetWindowTitle(gameWindow, title);
+}
+
+void ACE_WindowManager::SetWindowSize(int width, int height)
+{
+    SDL_SetWindowSize(gameWindow, width, height);
 }
 
 bool ACE_WindowManager::CreateRenderer()
@@ -60,32 +60,4 @@ bool ACE_WindowManager::CreateRenderer()
     if (gameWindow == nullptr) {return false;}
     gameRenderer = SDL_CreateRenderer(gameWindow, nullptr);
     return gameRenderer != nullptr;
-}
-
-SDL_Texture* ACE_WindowManager::LoadTextureFromFile(std::string path)
-{
-    SDL_Surface* p_surface = IMG_Load(path.c_str());
-    if (p_surface == nullptr)
-    {
-        std::cout << "Unable to load surface " << path << " : " << SDL_GetError() << std::endl;
-        return nullptr;
-    }
-    
-    SDL_Texture* p_texture = SDL_CreateTextureFromSurface(GetRenderer(), p_surface);
-    if (p_texture == nullptr)
-    {
-        std::cout << "Unable to load image " << path << " : " << SDL_GetError() << std::endl;
-        return nullptr;
-    }
-    SDL_DestroySurface(p_surface);
-    return p_texture;
-}
-
-void ACE_WindowManager::FreeTexture(SDL_Texture*& gTexture)
-{
-    if (gTexture != nullptr)
-    {
-        SDL_DestroyTexture(gTexture);
-        gTexture = nullptr;
-    }   
 }

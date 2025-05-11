@@ -8,7 +8,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21ce3860-45fe-4082-89ec-23f85dcab7e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/GameScreenManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/GameScreenManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Texture2D.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Texture2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/Box2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/Vector2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/test_2.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/ACE_WindowManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/ACE_WindowManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/ACE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/SDL_Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/SDL_Engine.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,24 +51,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SDL_Engine/SDL_Engine.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDL_Engine/GameScreen.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDL_Engine/GameScreen_L1.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SDL_Engine/GameScreen_L1.h" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2wuwLZ5QCpKvHhln24yazpjIihD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -145,13 +168,15 @@
       <workItem from="1746920296676" duration="18000" />
       <workItem from="1746920328754" duration="69000" />
       <workItem from="1746957958772" duration="19000" />
-      <workItem from="1746958510859" duration="478000" />
+      <workItem from="1746958510859" duration="1852000" />
+      <workItem from="1746961245327" duration="9626000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
