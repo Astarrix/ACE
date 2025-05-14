@@ -733,6 +733,7 @@
     <ClInclude Include="Characters\SubCharacters\Character_Mario.h" />
     <ClInclude Include="commons\Box2D.h" />
     <ClInclude Include="commons\Circle2D.h" />
+    <ClInclude Include="commons\Color.h" />
     <ClInclude Include="commons\constants.h" />
     <ClInclude Include="commons\Line2D.h" />
     <ClInclude Include="commons\Texture2D.h" />

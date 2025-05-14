@@ -1,4 +1,5 @@
 #pragma once
+#include "Sprite2D.h"
 #include "commons/Box2D.h"
 #include "commons/Texture2D.h"
 #include "Managers/LevelMap.h"
@@ -15,7 +16,7 @@ public:
 private:
 	SDL_Renderer* renderer;
 	Vector2D position;
-	Texture2D* texture;
+	Sprite2D* sprite;
 	LevelMap* levelMap;
 
 	float singleSprite_w;

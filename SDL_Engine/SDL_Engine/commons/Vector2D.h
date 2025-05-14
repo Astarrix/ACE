@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL3/SDL.h>
 
+#include "Color.h"
+
 struct Vector2D
 {
     float x = 0.0f;
@@ -88,6 +90,12 @@ struct Vector2D
         return {x / scalar, y / scalar};
     }
 
+    void DrawDebugPoint(SDL_Renderer* renderer, Color color)
+    {
+        SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
+        SDL_RenderPoint(renderer, x, y);
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    }
 
 
 };

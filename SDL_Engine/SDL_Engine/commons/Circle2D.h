@@ -27,4 +27,5 @@ struct Circle2D
 	{
 		return this->position.Distance(other) - radius;
 	}
+	
 };

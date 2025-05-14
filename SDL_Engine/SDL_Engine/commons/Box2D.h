@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Color.h"
 #include "commons/Vector2D.h"
 
 struct Box2D
@@ -89,4 +90,12 @@ struct Box2D
 		height = temp;
 	}
 
+	void DrawDebugRect(SDL_Renderer* renderer, Color color, bool isFilled = false)
+	{
+		SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
+		isFilled ? SDL_RenderFillRect(renderer, new SDL_FRect{ x, y, width, height }) : SDL_RenderRect(renderer, new SDL_FRect{ x, y, width, height });
+		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	}
+
+	
 };

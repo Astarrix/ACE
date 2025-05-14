@@ -35,17 +35,13 @@ void GameScreen_L1::Update(float deltaTime, SDL_Event* event)
     player2->Update(deltaTime, event);
     UpdatePOWBlocks();
     
-    if (CollisionManager::Instance()->CheckCollision(player, player2))
-    {
-        player->Jump();       
-    }
 }
 
 void GameScreen_L1::UpdatePOWBlocks()
 {
     if (CollisionManager::Instance()->CheckCollision(powBlock->GetCollisionBox(), player->GetBoundingBox()))
     {
-        if (player->IsJumping())
+        if (player->IsJumping() && powBlock->isAvailable() )
         {
             DoScreenShake();
             powBlock->TakeHit();

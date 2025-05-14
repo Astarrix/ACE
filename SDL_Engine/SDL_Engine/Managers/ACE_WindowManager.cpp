@@ -13,7 +13,7 @@ bool ACE_WindowManager::CreateWindow()
         "SDL Test Window",                  // Window title
         INIT_SCREEN_WIDTH,                       // Width
         INIT_SCREEN_HEIGHT,                      // Height
-        SDL_WINDOW_ALWAYS_ON_TOP              // Window flags
+        SDL_WINDOW_RESIZABLE              // Window flags
     );
 
     

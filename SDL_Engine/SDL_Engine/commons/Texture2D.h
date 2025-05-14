@@ -23,11 +23,12 @@ public:
     float GetWidth() const { return texture_width; }
     float GetHeight() const { return texture_height; }
 
-    
+    SDL_Texture* GetTexture() const { return texture; }
+protected:
+    SDL_Texture* texture;
     
 private:
     SDL_Renderer* renderer;
-    SDL_Texture* texture;
 
     int texture_width;
     int texture_height;
