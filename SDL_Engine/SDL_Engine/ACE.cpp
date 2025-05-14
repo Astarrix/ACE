@@ -50,6 +50,7 @@ bool Update()
             case SDLK_SPACE:
                 gameScreenManager->ChangeScreen(SCREEN_LEVEL2);
                 windowManager->SetWindowTitle("ACE - Level 2");
+                windowManager->SetWindowSize(1280, 720);
                 break;
         }
         break;
@@ -61,7 +62,9 @@ bool Update()
 
 void Render()
 {
+
     SDL_SetRenderDrawColor(windowManager->GetRenderer(), 0XFF, 0XFF, 0XFF, 0XFF);
+    SDL_SetRenderDrawBlendMode(windowManager->GetRenderer(), SDL_BLENDMODE_NONE);
     SDL_RenderClear(windowManager->GetRenderer());
     gameScreenManager->Render();
     SDL_RenderPresent(windowManager->GetRenderer());

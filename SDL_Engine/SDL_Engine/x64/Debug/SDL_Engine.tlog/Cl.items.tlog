@@ -1,7 +1,13 @@
 X:\Github\ACE\SDL_Engine\SDL_Engine\ACE.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\ACE.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Characters\Character.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\Character.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Characters\SubCharacters\Character_Luigi.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\Character_Luigi.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Characters\SubCharacters\Character_Mario.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\Character_Mario.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\commons\Texture2D.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\Texture2D.obj
 X:\Github\ACE\SDL_Engine\SDL_Engine\Managers\ACE_WindowManager.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\ACE_WindowManager.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Managers\CollisionManager.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\CollisionManager.obj
 X:\Github\ACE\SDL_Engine\SDL_Engine\Managers\GameScreenManager.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreenManager.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Managers\LevelMap.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\LevelMap.obj
+X:\Github\ACE\SDL_Engine\SDL_Engine\Objects\POW_Block.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\POW_Block.obj
 X:\Github\ACE\SDL_Engine\SDL_Engine\Screens\GameScreen.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreen.obj
 X:\Github\ACE\SDL_Engine\SDL_Engine\Screens\SubScreens\GameScreen_L1.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreen_L1.obj
 X:\Github\ACE\SDL_Engine\SDL_Engine\Screens\SubScreens\GameScreen_L2.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\GameScreen_L2.obj
-X:\Github\ACE\SDL_Engine\SDL_Engine\Texture2D.cpp;X:\Github\ACE\SDL_Engine\SDL_Engine\x64\Debug\Texture2D.obj

@@ -1,5 +1,5 @@
 #include "GameScreen_L2.h"
-#include "Texture2D.h"
+#include "commons/Texture2D.h"
 
 GameScreen_L2::GameScreen_L2(SDL_Renderer* renderer) : GameScreen(renderer)
 {

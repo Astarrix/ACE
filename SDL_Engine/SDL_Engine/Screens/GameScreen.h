@@ -7,9 +7,14 @@ public:
     ~GameScreen();
 
     virtual void Render() {};
-    virtual void Update(float deltaTime, SDL_Event* event) {};
+    virtual void Update(float deltaTime, SDL_Event* event);
 protected:
     SDL_Renderer* renderer;
+    void DoScreenShake();
+    bool screenshake;
+    float backgroundYPos;
 private:
-    
+    float shakeTime, wobble;
+
+
 };

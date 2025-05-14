@@ -8,24 +8,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21ce3860-45fe-4082-89ec-23f85dcab7e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/GameScreenManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/GameScreenManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Texture2D.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Texture2D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/Box2D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/Vector2D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/test_2.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/Character.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/Character.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Luigi.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Luigi.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Mario.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Mario.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/CollisionManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/CollisionManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/LevelMap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/LevelMap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Objects/POW_Block.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Objects/POW_Block.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Sprite2D.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/Sprite2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/Circle2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/Line2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/commons/constants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/BackgroundMB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/Coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/Luigi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/Mario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/NES - Mario Bros - General Sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/PeechSpritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/PowBlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL_Engine/images/ToadSpritesheet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/ACE_WindowManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/ACE_WindowManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/ACE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/ACE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/ACE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Texture2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/commons/Texture2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Texture2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/commons/Texture2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Box2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/commons/Box2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Vector2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/commons/Vector2D.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.read.1.tlog" afterDir="false" />
@@ -51,9 +72,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/SDL_Engine/GameScreen.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SDL_Engine/GameScreen_L1.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SDL_Engine/GameScreen_L1.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet.." root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -80,7 +100,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CppIncludesOrderConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -170,6 +190,15 @@
       <workItem from="1746957958772" duration="19000" />
       <workItem from="1746958510859" duration="1852000" />
       <workItem from="1746961245327" duration="9626000" />
+      <workItem from="1746976046828" duration="474000" />
+      <workItem from="1746991589585" duration="76000" />
+      <workItem from="1746995633755" duration="12574000" />
+      <workItem from="1747039888856" duration="6427000" />
+      <workItem from="1747081419535" duration="5280000" />
+      <workItem from="1747088821568" duration="4537000" />
+      <workItem from="1747212864270" duration="5243000" />
+      <workItem from="1747220875797" duration="2041000" />
+      <workItem from="1747225279479" duration="1822000" />
     </task>
     <servers />
   </component>

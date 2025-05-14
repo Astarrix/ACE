@@ -6,6 +6,9 @@
 #include <SDL3_image/SDL_image.h>
 #include <iostream>
 
+#include "commons/Box2D.h"
+#include "commons/constants.h"
+
 /**
  * @struct intBox2D
  * @brief A structure that represents a 2D box with integer coordinates
@@ -13,14 +16,6 @@
  * This structure is used to define rectangles for rendering and positioning
  * with integer coordinates.
  */
-struct intBox2D
-{
-public:
-    int x = 0;          /**< The x-coordinate of the box */
-    int y = 0;          /**< The y-coordinate of the box */
-    int width = 0;      /**< The width of the box */
-    int height = 0;     /**< The height of the box */
-};
 
 /**
  * @class ACE_WindowManager
@@ -69,7 +64,7 @@ public:
      * @brief Gets the current size of the window
      * @return An intBox2D structure with the window dimensions
      */
-    intBox2D GetWindowSize();
+    Box2D GetWindowSize();
     
     /**
      * @brief Gets the SDL window pointer
@@ -85,9 +80,10 @@ public:
 
     void SetWindowTitle(const char* title);
     void SetWindowSize(int width, int height);
+    void SetWindowPosition(int x, int y);
 private:
-    static constexpr int INIT_SCREEN_HEIGHT = 720;  /**< Default initial screen height */
-    static constexpr int INIT_SCREEN_WIDTH = 1280;  /**< Default initial screen width */
+    static constexpr int INIT_SCREEN_HEIGHT = SCREEN_HEIGHT;  /**< Default initial screen height */
+    static constexpr int INIT_SCREEN_WIDTH = SCREEN_WIDTH;  /**< Default initial screen width */
 
     SDL_Window* gameWindow = nullptr;       /**< Pointer to the SDL window */
     SDL_Renderer* gameRenderer = nullptr;   /**< Pointer to the SDL renderer */
