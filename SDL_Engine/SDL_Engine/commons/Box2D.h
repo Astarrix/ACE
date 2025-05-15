@@ -70,7 +70,7 @@ struct Box2D
 
 	float GetDiagonal()
 	{
-		return sqrtf(powf(width, 2) + powf(height, 2));
+		return sqrtf(powf(width, 2) + powf(height, 2)); // sqrt(a^2 + b^2) = c
 	}
 
 	float GetLongestSide()
@@ -93,9 +93,14 @@ struct Box2D
 	void DrawDebugRect(SDL_Renderer* renderer, Color color, bool isFilled = false)
 	{
 		SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
-		isFilled ? SDL_RenderFillRect(renderer, new SDL_FRect{ x, y, width, height }) : SDL_RenderRect(renderer, new SDL_FRect{ x, y, width, height });
+		isFilled
+			? SDL_RenderFillRect(renderer, new SDL_FRect{x, y, width, height})
+			: SDL_RenderRect(renderer, new SDL_FRect{x, y, width, height});
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	}
 
-	
+	Box2D ScaleBox(Vector2D scale)
+	{
+		return {x, y, width * scale.x, height * scale.y};
+	}
 };

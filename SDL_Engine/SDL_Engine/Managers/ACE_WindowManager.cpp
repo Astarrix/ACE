@@ -66,6 +66,5 @@ bool ACE_WindowManager::CreateRenderer()
 {
     if (gameWindow == nullptr) {return false;}
     gameRenderer = SDL_CreateRenderer(gameWindow, nullptr);
-    
     return gameRenderer != nullptr;
 }

@@ -700,11 +700,19 @@
     <ClCompile Include="Sprite2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="audio\Mario.mp3" />
+    <Content Include="audio\MarioUnderworld.mp3" />
     <Content Include="images\BackgroundMB.png" />
     <Content Include="images\Coin.png" />
+    <Content Include="images\Koopa.png" />
     <Content Include="images\Luigi.png" />
     <Content Include="images\Mario.png" />
     <Content Include="images\NES - Mario Bros - General Sprites.png" />
+    <Content Include="images\npc-123.gif" />
+    <Content Include="images\npc-164.gif" />
+    <Content Include="images\npc-53.gif" />
+    <Content Include="images\NPC1.png" />
+    <Content Include="images\Goomba.png" />
     <Content Include="images\PeechSpritesheet.png" />
     <Content Include="images\PowBlock.png" />
     <Content Include="images\test_2.bmp" />

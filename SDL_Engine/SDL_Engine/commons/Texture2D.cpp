@@ -34,7 +34,8 @@ bool Texture2D::LoadFromFile(std::string path)
         std::cout << "Unable to load surface " << path << " : " << SDL_GetError() << std::endl;
         return false;
     }
-    SDL_SetSurfaceColorKey(p_surface, true, SDL_MapRGB(SDL_GetPixelFormatDetails(p_surface->format),0, 0xFF, 0xFF, 0xFF));
+    //SDL_SetSurfaceColorKey(p_surface, true, SDL_MapRGB(SDL_GetPixelFormatDetails(p_surface->format),0, 0xFF, 0xFF, 0xFF));
+    SDL_SetSurfaceBlendMode(p_surface, SDL_BLENDMODE_BLEND);
     texture = SDL_CreateTextureFromSurface(renderer, p_surface);
 
     if (texture == nullptr)

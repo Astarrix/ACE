@@ -3,6 +3,7 @@
 #include "Managers/ACE_WindowManager.h"
 #include "Managers/GameScreenManager.h"
 
+
 bool Update();
 void Render();
 void Close();
@@ -18,7 +19,6 @@ int main(int argc, char* argv[])
     gameScreenManager = new GameScreenManager(windowManager->GetRenderer(), SCREEN_LEVEL1);
     gOldTime = SDL_GetTicks();
     
-        
     // Main loop
     bool bIsGameRunning = true;
     while (bIsGameRunning)
@@ -63,8 +63,8 @@ bool Update()
 void Render()
 {
 
-    SDL_SetRenderDrawColor(windowManager->GetRenderer(), 0XFF, 0XFF, 0XFF, 0XFF);
-    SDL_SetRenderDrawBlendMode(windowManager->GetRenderer(), SDL_BLENDMODE_NONE);
+    SDL_SetRenderDrawColor(windowManager->GetRenderer(), 0X00, 0X00, 0X00, 0X00);
+    SDL_SetRenderDrawBlendMode(windowManager->GetRenderer(), SDL_BLENDMODE_BLEND);
     SDL_RenderClear(windowManager->GetRenderer());
     gameScreenManager->Render();
     SDL_RenderPresent(windowManager->GetRenderer());

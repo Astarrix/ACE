@@ -6,7 +6,7 @@ class Sprite2D : public Texture2D
 public:
 	Sprite2D(SDL_Renderer* renderer);
 
-	void LoadSpriteSheetFromFile(std::string path, int inRows, int inColumns, int inCurrentRow = 0, int inCurrentColumn = 0);
+	void LoadSpriteSheetFromFile(std::string path, int inRows = 1, int inColumns = 1, int inCurrentRow = 0, int inCurrentColumn = 0);
 	void RenderSprite(Vector2D position, SDL_FlipMode flip = SDL_FLIP_NONE);
 	void SetSpriteIndex(int spriteIndex);
 	float GetSpriteWidth() {return spriteWidth;}
