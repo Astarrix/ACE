@@ -29,7 +29,7 @@
  * of flags to specify subsystems to touch. These are here to make sure SDL
  * does not even attempt to touch low-level pieces of the operating system
  * that you don't intend to use. For example, you might be using SDL for video
- * and input but chose an external library for audio, and in this case you
+ * and input but chose an external library for Audio, and in this case you
  * would just need to leave off the `SDL_INIT_AUDIO` flag to make sure that
  * external library has complete control.
  *
@@ -41,7 +41,7 @@
  * SDL3 apps are strongly encouraged to call SDL_SetAppMetadata() at startup
  * to fill in details about the program. This is completely optional, but it
  * helps in small ways (we can provide an About dialog box for the macOS menu,
- * we can name the app in the system's audio mixer, etc). Those that want to
+ * we can name the app in the system's Audio mixer, etc). Those that want to
  * provide a _lot_ of information should look at the more-detailed
  * SDL_SetAppMetadataProperty().
  */
@@ -363,7 +363,7 @@ extern SDL_DECLSPEC bool SDLCALL SDL_RunOnMainThread(SDL_MainThreadCallback call
  * required, but strongly encouraged.
  *
  * There are several locations where SDL can make use of metadata (an "About"
- * box in the macOS menu bar, the name of the app can be shown on some audio
+ * box in the macOS menu bar, the name of the app can be shown on some Audio
  * mixers, etc). Any piece of metadata can be left as NULL, if a specific
  * detail doesn't make sense for the app.
  *
@@ -401,7 +401,7 @@ extern SDL_DECLSPEC bool SDLCALL SDL_SetAppMetadata(const char *appname, const c
  * required, but strongly encouraged.
  *
  * There are several locations where SDL can make use of metadata (an "About"
- * box in the macOS menu bar, the name of the app can be shown on some audio
+ * box in the macOS menu bar, the name of the app can be shown on some Audio
  * mixers, etc). Any piece of metadata can be left out, if a specific detail
  * doesn't make sense for the app.
  *

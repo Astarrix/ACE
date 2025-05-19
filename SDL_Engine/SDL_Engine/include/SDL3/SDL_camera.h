@@ -42,11 +42,11 @@
  * Note that SDL cameras only provide video as individual frames; they will
  * not provide full-motion video encoded in a movie file format, although an
  * app is free to encode the acquired frames into any format it likes. It also
- * does not provide audio from the camera hardware through this API; not only
+ * does not provide Audio from the camera hardware through this API; not only
  * do many webcams not have microphones at all, many people--from streamers to
  * people on Zoom calls--will want to use a separate microphone regardless of
- * the camera. In any case, recorded audio will be available through SDL's
- * audio API no matter what hardware provides the microphone.
+ * the camera. In any case, recorded Audio will be available through SDL's
+ * Audio API no matter what hardware provides the microphone.
  *
  * ## Camera gotchas
  *

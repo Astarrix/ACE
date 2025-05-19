@@ -1,5 +1,5 @@
 #include "GameScreen_L2.h"
-#include "commons/Texture2D.h"
+#include "components/ACE_Texture2D.h"
 
 GameScreen_L2::GameScreen_L2(SDL_Renderer* renderer) : GameScreen(renderer)
 {
@@ -15,7 +15,7 @@ GameScreen_L2::~GameScreen_L2()
 void GameScreen_L2::Render()
 {
     GameScreen::Render();
-    background_texture->Render(Vector2D(), SDL_FLIP_NONE);   
+    background_texture->Render(ACE_Vector2D(), SDL_FLIP_NONE);   
 }
 
 void GameScreen_L2::Update(float deltaTime, SDL_Event* event)
@@ -25,7 +25,7 @@ void GameScreen_L2::Update(float deltaTime, SDL_Event* event)
 
 bool GameScreen_L2::SetUpLevel()
 {
-    background_texture = new Texture2D(renderer);
+    background_texture = new ACE_Texture2D(renderer);
     if (!background_texture->LoadFromFile("images/test_2.bmp"))
     {
         std::cout << "Unable to load background texture" << std::endl;

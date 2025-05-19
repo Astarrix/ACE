@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Screens/GameScreen.h"
-class Texture2D;
+class ACE_Texture2D;
 
 
 class GameScreen_L2 : GameScreen
@@ -13,6 +13,6 @@ public:
     void Render() override;
     void Update(float deltaTime, SDL_Event* event) override;
 private:
-    Texture2D* background_texture;
+    ACE_Texture2D* background_texture;
     bool SetUpLevel();
 };

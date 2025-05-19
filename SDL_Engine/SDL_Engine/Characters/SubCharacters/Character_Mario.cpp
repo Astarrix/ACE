@@ -1,6 +1,6 @@
 #include "Character_Mario.h"
 
-Character_Mario::Character_Mario(SDL_Renderer* renderer, std::string imgPath, Vector2D initPosition, LevelMap* map) : Character(renderer, imgPath, initPosition, map){}
+Character_Mario::Character_Mario(SDL_Renderer* renderer, SpriteData spriteData, ACE_Vector2D initPosition, ACE_LevelMap* map) : Character(renderer, spriteData, initPosition, map){}
 
 void Character_Mario::Update(float deltaTime, SDL_Event* event)
 {

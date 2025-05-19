@@ -1,6 +1,6 @@
 #include "Character_Luigi.h"
 
-Character_Luigi::Character_Luigi(SDL_Renderer* renderer, std::string imgPath, Vector2D initPosition, LevelMap* map) : Character(renderer, imgPath, initPosition, map){}
+Character_Luigi::Character_Luigi(SDL_Renderer* renderer, SpriteData spriteData, ACE_Vector2D initPosition, ACE_LevelMap* map) : Character(renderer, spriteData, initPosition, map){}
 
 void Character_Luigi::Update(float deltaTime, SDL_Event* event)
 {

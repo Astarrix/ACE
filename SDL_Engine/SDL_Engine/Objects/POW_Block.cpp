@@ -1,18 +1,20 @@
 #include "POW_Block.h"
 
-POW_Block::POW_Block(SDL_Renderer* renderer, LevelMap* map)
+#include "Managers/ACE_AudioManager.h"
+
+POW_Block::POW_Block(SDL_Renderer* renderer, ACE_LevelMap* map)
 {
 	this->renderer = renderer;
 	this->levelMap = map;
 	numHitsRemaining = 3;
 	std::string imgPath = "images/PowBlock.png";
-	sprite = new Sprite2D(renderer);
-	sprite->LoadSpriteSheetFromFile(imgPath, 1, 3);
+	sprite = new ACE_Sprite2D(renderer);
+	sprite->LoadSpriteSheetFromFile(SpriteData(imgPath, 1, 3));
 	sprite->SetSpriteIndex(numHitsRemaining - 1);
 	singleSprite_w = sprite->GetWidth() / 3;
 	singleSprite_h = sprite->GetHeight() / 1;
 
-	position = Vector2D((SCREEN_WIDTH / 2) -  sprite->GetSpriteWidth() / 2, 260);
+	position = ACE_Vector2D((SCREEN_WIDTH / 2) -  sprite->GetSpriteWidth() / 2, 260);
 }
 
 POW_Block::~POW_Block()
@@ -31,9 +33,9 @@ void POW_Block::Render()
 	}
 }
 
-Box2D POW_Block::GetCollisionBox()
+ACE_Box2D POW_Block::GetCollisionBox()
 {
-	Box2D box;
+	ACE_Box2D box;
 	box.x = position.x;
 	box.y = position.y;
 	box.width = sprite->GetSpriteWidth();
@@ -43,6 +45,8 @@ Box2D POW_Block::GetCollisionBox()
 
 void POW_Block::TakeHit()
 {
+	std::cout << "Hit" << std::endl;
+	ACE_AudioManager::Instance()->LoadWav("audio/Sounds/smb_bump.wav");
 	numHitsRemaining--;
 	if (numHitsRemaining <= 0)
 	{

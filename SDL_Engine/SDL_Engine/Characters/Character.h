@@ -1,9 +1,10 @@
 #pragma once
-#include "commons/Texture2D.h"
-#include "commons/Box2D.h"
-#include "commons/Circle2D.h"
-#include "commons/Vector2D.h"
-#include "Managers/LevelMap.h"
+#include "Components/ACE_Sprite2D.h"
+#include "Components/ACE_Texture2D.h"
+#include "Commons/ACE_Box2D.h"
+#include "Commons/ACE_Circle2D.h"
+#include "Commons/ACE_Vector2D.h"
+#include "Managers/ACE_LevelMap.h"
 #include "SDL3/SDL_render.h"
 
 enum FACING_DIRECTION
@@ -14,35 +15,46 @@ enum FACING_DIRECTION
 
 class Character
 {
+#define INITIAL_JUMP_FORCE 700.0f
+#define JUMP_FORCE_DECREMENT 600.0f
 public:
-    Character(SDL_Renderer* renderer, std::string imgPath, Vector2D initPosition = Vector2D(0.0,0.0), LevelMap* map = nullptr);
-    ~Character();
+    Character(SDL_Renderer* renderer, SpriteData spriteData, ACE_Vector2D initPosition = ACE_Vector2D(0.0,0.0), ACE_LevelMap* map = nullptr);
+    virtual ~Character();
     virtual void Render();
     virtual void Update(float deltaTime, SDL_Event* event);
     
-    void SetPosition(Vector2D newPosition);
-    Vector2D GetPosition() const { return position; }
-    Box2D GetBoundingBox() const;
-    Circle2D GetBoundingCircle() const;
+    void SetPosition(ACE_Vector2D newPosition);
+    ACE_Vector2D GetPosition() const { return position; }
+    ACE_Box2D GetBoundingBox() const;
+    ACE_Circle2D GetBoundingCircle() const;
     
-    virtual void Move(float deltaTime, Vector2D direction);
-    virtual void Jump();
+    virtual void Move(float deltaTime, ACE_Vector2D direction);
+    virtual void Jump(float inJumpForce = INITIAL_JUMP_FORCE);
     virtual void AddGravity(float deltaTime);
 
     bool IsJumping() {return isJumping;}
     void CancelJump() {isJumping = false;}
+
+    bool IsAlive() {return isAlive;}
+    void SetAlive(bool alive) {isAlive = alive;}
+
+    float GetWidth() const { return sprite->GetSpriteWidth(); }
+    float GetHeight() const { return sprite->GetSpriteHeight(); }
+
+    void PrintCharacterInfo();
 protected:
     SDL_Renderer* renderer;
-    Vector2D position;
-    Texture2D* texture;
+    ACE_Vector2D position;
+    ACE_Sprite2D* sprite;
     FACING_DIRECTION facingDirection;
-    bool isMovingRight;
-    bool isMovingLeft;
-    bool isJumping;
-    bool canJump;
-    float jumpForce;
+    bool isMovingRight = false;
+    bool isMovingLeft = false;
+    bool isJumping = false;
+    bool canJump = true;
+    float jumpForce = 0;
     float MovementSpeed = 100.0f;
-    float Mass = 20.0f;
+    float Mass = 30.0f;
+    bool isAlive = true;
 private:
-    LevelMap* levelMap;
+    ACE_LevelMap* levelMap;
 };

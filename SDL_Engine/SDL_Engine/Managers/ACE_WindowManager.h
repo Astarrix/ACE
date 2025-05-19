@@ -6,8 +6,8 @@
 #include <SDL3_image/SDL_image.h>
 #include <iostream>
 
-#include "commons/Box2D.h"
-#include "commons/constants.h"
+#include "Commons/ACE_Box2D.h"
+#include "Commons/ACE_Constants.h"
 
 /**
  * @struct intBox2D
@@ -64,7 +64,7 @@ public:
      * @brief Gets the current size of the window
      * @return An intBox2D structure with the window dimensions
      */
-    Box2D GetWindowSize();
+    ACE_Box2D GetWindowSize();
     
     /**
      * @brief Gets the SDL window pointer

@@ -101,17 +101,17 @@ extern "C" {
 #define SDL_HINT_ANDROID_BLOCK_ON_PAUSE "SDL_ANDROID_BLOCK_ON_PAUSE"
 
 /**
- * A variable to control whether low latency audio should be enabled.
+ * A variable to control whether low latency Audio should be enabled.
  *
  * Some devices have poor quality output when this is enabled, but this is
- * usually an improvement in audio latency.
+ * usually an improvement in Audio latency.
  *
  * The variable can be set to the following values:
  *
  * - "0": Low latency audio is not enabled.
  * - "1": Low latency audio is enabled. (default)
  *
- * This hint should be set before SDL audio is initialized.
+ * This hint should be set before SDL Audio is initialized.
  *
  * \since This hint is available since SDL 3.2.0.
  */
@@ -161,7 +161,7 @@ extern "C" {
  *
  * This hint lets you specify the application name sent to the OS when
  * required. For example, this will often appear in volume control applets for
- * audio streams, and in lists of applications which are inhibiting the
+ * Audio streams, and in lists of applications which are inhibiting the
  * screensaver. You should use a string that describes your program ("My Game
  * 2: The Revenge")
  *
@@ -213,9 +213,9 @@ extern "C" {
 #define SDL_HINT_APPLE_TV_REMOTE_ALLOW_ROTATION "SDL_APPLE_TV_REMOTE_ALLOW_ROTATION"
 
 /**
- * Specify the default ALSA audio device name.
+ * Specify the default ALSA Audio device name.
  *
- * This variable is a specific audio device to open when the "default" audio
+ * This variable is a specific Audio device to open when the "default" Audio
  * device is used.
  *
  * This hint will be ignored when opening the default playback device if
@@ -223,7 +223,7 @@ extern "C" {
  * default recording device if SDL_HINT_AUDIO_ALSA_DEFAULT_RECORDING_DEVICE is
  * set.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  *
@@ -233,15 +233,15 @@ extern "C" {
 #define SDL_HINT_AUDIO_ALSA_DEFAULT_DEVICE "SDL_AUDIO_ALSA_DEFAULT_DEVICE"
 
 /**
- * Specify the default ALSA audio playback device name.
+ * Specify the default ALSA Audio playback device name.
  *
- * This variable is a specific audio device to open for playback, when the
- * "default" audio device is used.
+ * This variable is a specific Audio device to open for playback, when the
+ * "default" Audio device is used.
  *
  * If this hint isn't set, SDL will check SDL_HINT_AUDIO_ALSA_DEFAULT_DEVICE
  * before choosing a reasonable default.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  *
@@ -251,15 +251,15 @@ extern "C" {
 #define SDL_HINT_AUDIO_ALSA_DEFAULT_PLAYBACK_DEVICE "SDL_AUDIO_ALSA_DEFAULT_PLAYBACK_DEVICE"
 
 /**
- * Specify the default ALSA audio recording device name.
+ * Specify the default ALSA Audio recording device name.
  *
- * This variable is a specific audio device to open for recording, when the
- * "default" audio device is used.
+ * This variable is a specific Audio device to open for recording, when the
+ * "default" Audio device is used.
  *
  * If this hint isn't set, SDL will check SDL_HINT_AUDIO_ALSA_DEFAULT_DEVICE
  * before choosing a reasonable default.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  *
@@ -269,7 +269,7 @@ extern "C" {
 #define SDL_HINT_AUDIO_ALSA_DEFAULT_RECORDING_DEVICE "SDL_AUDIO_ALSA_DEFAULT_RECORDING_DEVICE"
 
 /**
- * A variable controlling the audio category on iOS and macOS.
+ * A variable controlling the Audio category on iOS and macOS.
  *
  * The variable can be set to the following values:
  *
@@ -280,32 +280,32 @@ extern "C" {
  * For more information, see Apple's documentation:
  * https://developer.apple.com/library/content/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionCategoriesandModes/AudioSessionCategoriesandModes.html
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_CATEGORY "SDL_AUDIO_CATEGORY"
 
 /**
- * A variable controlling the default audio channel count.
+ * A variable controlling the default Audio channel count.
  *
- * If the application doesn't specify the audio channel count when opening the
+ * If the application doesn't specify the Audio channel count when opening the
  * device, this hint can be used to specify a default channel count that will
  * be used. This defaults to "1" for recording and "2" for playback devices.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_CHANNELS "SDL_AUDIO_CHANNELS"
 
 /**
- * Specify an application icon name for an audio device.
+ * Specify an application icon name for an Audio device.
  *
- * Some audio backends (such as Pulseaudio and Pipewire) allow you to set an
+ * Some Audio backends (such as Pulseaudio and Pipewire) allow you to set an
  * XDG icon name for your application. Among other things, this icon might
  * show up in a system control panel that lets the user adjust the volume on
- * specific audio streams instead of using one giant master volume slider.
+ * specific Audio streams instead of using one giant master volume slider.
  * Note that this is unrelated to the icon used by the windowing system, which
  * may be set with SDL_SetWindowIcon (or via desktop file on Wayland).
  *
@@ -316,7 +316,7 @@ extern "C" {
  * https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
  * for the relevant XDG icon specs.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
@@ -326,7 +326,7 @@ extern "C" {
  * A variable controlling device buffer size.
  *
  * This hint is an integer > 0, that represents the size of the device's
- * buffer in sample frames (stereo audio data in 16-bit format is 4 bytes per
+ * buffer in sample frames (stereo Audio data in 16-bit format is 4 bytes per
  * sample frame, for example).
  *
  * SDL3 generally decides this value on behalf of the app, but if for some
@@ -338,104 +338,104 @@ extern "C" {
  * the buffer size requested. Many platforms won't honor this request at all,
  * or might adjust it.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DEVICE_SAMPLE_FRAMES "SDL_AUDIO_DEVICE_SAMPLE_FRAMES"
 
 /**
- * Specify an audio stream name for an audio device.
+ * Specify an Audio stream name for an Audio device.
  *
- * Some audio backends (such as PulseAudio) allow you to describe your audio
+ * Some Audio backends (such as PulseAudio) allow you to describe your Audio
  * stream. Among other things, this description might show up in a system
- * control panel that lets the user adjust the volume on specific audio
+ * control panel that lets the user adjust the volume on specific Audio
  * streams instead of using one giant master volume slider.
  *
  * This hints lets you transmit that information to the OS. The contents of
- * this hint are used while opening an audio device. You should use a string
- * that describes your what your program is playing ("audio stream" is
+ * this hint are used while opening an Audio device. You should use a string
+ * that describes your what your program is playing ("Audio stream" is
  * probably sufficient in many cases, but this could be useful for something
- * like "team chat" if you have a headset playing VoIP audio separately).
+ * like "team chat" if you have a headset playing VoIP Audio separately).
  *
  * Setting this to "" or leaving it unset will have SDL use a reasonable
- * default: "audio stream" or something similar.
+ * default: "Audio stream" or something similar.
  *
- * Note that while this talks about audio streams, this is an OS-level
- * concept, so it applies to a physical audio device in this case, and not an
- * SDL_AudioStream, nor an SDL logical audio device.
+ * Note that while this talks about Audio streams, this is an OS-level
+ * concept, so it applies to a physical Audio device in this case, and not an
+ * SDL_AudioStream, nor an SDL logical Audio device.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DEVICE_STREAM_NAME "SDL_AUDIO_DEVICE_STREAM_NAME"
 
 /**
- * Specify an application role for an audio device.
+ * Specify an application role for an Audio device.
  *
- * Some audio backends (such as Pipewire) allow you to describe the role of
- * your audio stream. Among other things, this description might show up in a
+ * Some Audio backends (such as Pipewire) allow you to describe the role of
+ * your Audio stream. Among other things, this description might show up in a
  * system control panel or software for displaying and manipulating media
  * playback/recording graphs.
  *
  * This hints lets you transmit that information to the OS. The contents of
- * this hint are used while opening an audio device. You should use a string
+ * this hint are used while opening an Audio device. You should use a string
  * that describes your what your program is playing (Game, Music, Movie,
  * etc...).
  *
  * Setting this to "" or leaving it unset will have SDL use a reasonable
  * default: "Game" or something similar.
  *
- * Note that while this talks about audio streams, this is an OS-level
- * concept, so it applies to a physical audio device in this case, and not an
- * SDL_AudioStream, nor an SDL logical audio device.
+ * Note that while this talks about Audio streams, this is an OS-level
+ * concept, so it applies to a physical Audio device in this case, and not an
+ * SDL_AudioStream, nor an SDL logical Audio device.
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DEVICE_STREAM_ROLE "SDL_AUDIO_DEVICE_STREAM_ROLE"
 
 /**
- * Specify the input file when recording audio using the disk audio driver.
+ * Specify the input file when recording Audio using the disk Audio driver.
  *
  * This defaults to "sdlaudio-in.raw"
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DISK_INPUT_FILE "SDL_AUDIO_DISK_INPUT_FILE"
 
 /**
- * Specify the output file when playing audio using the disk audio driver.
+ * Specify the output file when playing Audio using the disk Audio driver.
  *
  * This defaults to "sdlaudio.raw"
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DISK_OUTPUT_FILE "SDL_AUDIO_DISK_OUTPUT_FILE"
 
 /**
- * A variable controlling the audio rate when using the disk audio driver.
+ * A variable controlling the Audio rate when using the disk Audio driver.
  *
- * The disk audio driver normally simulates real-time for the audio rate that
+ * The disk Audio driver normally simulates real-time for the Audio rate that
  * was specified, but you can use this variable to adjust this rate higher or
  * lower down to 0. The default value is "1.0".
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DISK_TIMESCALE "SDL_AUDIO_DISK_TIMESCALE"
 
 /**
- * A variable that specifies an audio backend to use.
+ * A variable that specifies an Audio backend to use.
  *
- * By default, SDL will try all available audio backends in a reasonable order
+ * By default, SDL will try all available Audio backends in a reasonable order
  * until it finds one that can work, but this hint allows the app or user to
  * force a specific driver, such as "pipewire" if, say, you are on PulseAudio
  * but want to try talking to the lower level instead.
@@ -447,22 +447,22 @@ extern "C" {
 #define SDL_HINT_AUDIO_DRIVER "SDL_AUDIO_DRIVER"
 
 /**
- * A variable controlling the audio rate when using the dummy audio driver.
+ * A variable controlling the Audio rate when using the dummy Audio driver.
  *
- * The dummy audio driver normally simulates real-time for the audio rate that
+ * The dummy Audio driver normally simulates real-time for the Audio rate that
  * was specified, but you can use this variable to adjust this rate higher or
  * lower down to 0. The default value is "1.0".
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_DUMMY_TIMESCALE "SDL_AUDIO_DUMMY_TIMESCALE"
 
 /**
- * A variable controlling the default audio format.
+ * A variable controlling the default Audio format.
  *
- * If the application doesn't specify the audio format when opening the
+ * If the application doesn't specify the Audio format when opening the
  * device, this hint can be used to specify a default format that will be
  * used.
  *
@@ -480,33 +480,33 @@ extern "C" {
  * - "F32BE": Floating point big-endian audio
  * - "F32": Floating point native-endian audio
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_FORMAT "SDL_AUDIO_FORMAT"
 
 /**
- * A variable controlling the default audio frequency.
+ * A variable controlling the default Audio frequency.
  *
- * If the application doesn't specify the audio frequency when opening the
+ * If the application doesn't specify the Audio frequency when opening the
  * device, this hint can be used to specify a default frequency that will be
  * used. This defaults to "44100".
  *
- * This hint should be set before an audio device is opened.
+ * This hint should be set before an Audio device is opened.
  *
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_AUDIO_FREQUENCY "SDL_AUDIO_FREQUENCY"
 
 /**
- * A variable that causes SDL to not ignore audio "monitors".
+ * A variable that causes SDL to not ignore Audio "monitors".
  *
  * This is currently only used by the PulseAudio driver.
  *
- * By default, SDL ignores audio devices that aren't associated with physical
+ * By default, SDL ignores Audio devices that aren't associated with physical
  * hardware. Changing this hint to "1" will expose anything SDL sees that
- * appears to be an audio source or sink. This will add "devices" to the list
+ * appears to be an Audio source or sink. This will add "devices" to the list
  * that the user probably doesn't want or need, but it can be useful in
  * scenarios where you want to hook up SDL to some sort of virtual device,
  * etc.
@@ -2296,7 +2296,7 @@ extern "C" {
  * the default logging levels for SDL applications.
  *
  * The category can be a numeric category, one of "app", "error", "assert",
- * "system", "audio", "video", "render", "input", "test", or `*` for any
+ * "system", "Audio", "video", "render", "input", "test", or `*` for any
  * unspecified category.
  *
  * The level can be a numeric level, one of "verbose", "debug", "info",

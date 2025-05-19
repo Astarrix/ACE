@@ -1,31 +1,44 @@
 #include "Character.h"
 
-#include "commons/constants.h"
+#include "Commons/ACE_Constants.h"
 
 
-Character::Character(SDL_Renderer* renderer, std::string imgPath, Vector2D initPosition, LevelMap* map)
+Character::Character(SDL_Renderer* renderer, SpriteData spriteData, ACE_Vector2D initPosition, ACE_LevelMap* map)
 {
     this->renderer = renderer;
     position = initPosition;
-    texture = new Texture2D(renderer);
-    texture->LoadFromFile(imgPath);
+    sprite = new ACE_Sprite2D(renderer);
+    sprite->LoadSpriteSheetFromFile(spriteData);
     levelMap = map;
 }
 
 Character::~Character()
 {
+    delete sprite;
+    sprite = nullptr;
     this->renderer = nullptr;
+    levelMap = nullptr;
 }
 
 void Character::Render()
 {
     SDL_FlipMode flip = facingDirection == FACING_RIGHT ? SDL_FLIP_NONE : SDL_FLIP_HORIZONTAL;
-    texture->Render(position, flip);
+    sprite->RenderSprite(position, flip);
+    
+    int centralXPosition = int(position.x + (sprite->GetSpriteWidth() / 2)) / TILE_WIDTH;
+    int footPosition = int(position.y + sprite->GetSpriteHeight()) / TILE_HEIGHT;
+
+    if (bool DrawFootPos = false)
+    {
+        ACE_Box2D box = ACE_Box2D(centralXPosition * TILE_WIDTH, footPosition * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
+        box.DrawDebugRect(renderer, ACE_Color::Green(), true);
+        GetBoundingBox().DrawDebugRect(renderer, ACE_Color::Red());
+    }
 }
 
 void Character::Update(float deltaTime, SDL_Event* event)
 {
-    Vector2D direction;
+    ACE_Vector2D direction;
     direction.x = isMovingRight ? 1.0f : isMovingLeft ? -1.0f : 0.0f;
     if (direction.x > 0 || direction.x < 0) { Move(deltaTime, direction);}
     if (isJumping)
@@ -37,8 +50,8 @@ void Character::Update(float deltaTime, SDL_Event* event)
             isJumping = false;
         }
     }
-    int CentralXPosition = int(position.x + texture->GetWidth() / 2) / TILE_WIDTH;
-    int footPosition = int(position.y + texture->GetHeight()) / TILE_HEIGHT;
+    int CentralXPosition = int(position.x + sprite->GetSpriteWidth() / 2) / TILE_WIDTH;
+    int footPosition = int(position.y + sprite->GetSpriteHeight()) / TILE_HEIGHT;
     if (levelMap && levelMap->GetTile(CentralXPosition, footPosition) == 1)
     {
         canJump = true;
@@ -50,38 +63,38 @@ void Character::Update(float deltaTime, SDL_Event* event)
 
 }
 
-void Character::SetPosition(Vector2D newPosition)
+void Character::SetPosition(ACE_Vector2D newPosition)
 {
     position = newPosition;
 }
 
-Box2D Character::GetBoundingBox() const
+ACE_Box2D Character::GetBoundingBox() const
 {
-    Box2D box;
+    ACE_Box2D box;
     box.x = position.x;
     box.y = position.y;
-    box.width = texture->GetWidth();
-    box.height = texture->GetHeight();
+    box.width = sprite->GetSpriteWidth();
+    box.height = sprite->GetSpriteHeight();
     return box;
 }
 
-Circle2D Character::GetBoundingCircle() const
+ACE_Circle2D Character::GetBoundingCircle() const
 {
-    Circle2D circle;
-    circle.radius = texture->GetWidth() / 2;
+    ACE_Circle2D circle;
+    circle.radius = sprite->GetSpriteWidth() / 2;
     circle.position = position;
     return circle;
 }
 
-void Character::Move(float deltaTime, Vector2D direction)
+void Character::Move(float deltaTime, ACE_Vector2D direction)
 {
     facingDirection = direction.x > 0 ? FACING_RIGHT : FACING_LEFT;
     position.x += direction.Normalize().x * MovementSpeed * deltaTime;
 }
 
-void Character::Jump()
+void Character::Jump(float inJumpForce)
 {
-    jumpForce = INITIAL_JUMP_FORCE;
+    jumpForce = inJumpForce;
     isJumping = true;
     canJump = false;
 }
@@ -89,20 +102,24 @@ void Character::Jump()
 
 void Character::AddGravity(float deltaTime)
 {
-    int x,y,w,h;
-    SDL_GetWindowPosition(SDL_GetRenderWindow(renderer), &x, &y);
-    SDL_GetWindowSize(SDL_GetRenderWindow(renderer), &w, &h);
+    int centralXPosition = int(position.x + sprite->GetSpriteWidth() / 2) / TILE_WIDTH;
+    int footPosition = int(position.y + sprite->GetSpriteHeight()) / TILE_HEIGHT;
     
-    if (position.y < h - texture->GetHeight()) // if above the screen
+    if (!levelMap->GetTile(centralXPosition, footPosition))
     {
         position.y += GRAVITY * Mass * deltaTime;
-    } else if (position.y > h - texture->GetHeight()) // if set below the screen
-    {
-        position.y = h - texture->GetHeight();
     }
     else
     {
-        canJump = true;
+        // Snap to tile top
+        position.y = (footPosition * TILE_HEIGHT) - sprite->GetSpriteHeight();
     }
+}
+
+void Character::PrintCharacterInfo()
+{
+    std::cout << "Character Position: " << position.x << ", " << position.y << std::endl;
+    std::cout << "Character Sprite Width: " << sprite->GetSpriteWidth() << std::endl;
+    std::cout << "Character Sprite Height: " << sprite->GetSpriteHeight() << std::endl;
 }
 

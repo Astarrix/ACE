@@ -75,6 +75,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)include;$(ProjectDir);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -83,6 +84,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)include;$(ProjectDir);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -98,10 +100,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib;SDL3_image.lib;SDL3_ttf.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,14 +117,15 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib;SDL3_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib;SDL3_image.lib;SDL3_ttf.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)lib\x64\SDL3.dll" "$(OutDir)" &amp; copy /Y "$(ProjectDir)lib\x64\SDL3_image.dll" "$(OutDir)"</Command>
+      <Command>copy /Y "$(ProjectDir)lib\x64\SDL3.dll" "$(OutDir)" &amp; copy /Y "$(ProjectDir)lib\x64\SDL3_image.dll" "$(OutDir)" &amp; copy /Y "$(ProjectDir)lib\x64\SDL3_ttf.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -134,12 +139,14 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib;SDL3_image.lib;SDL3_ttf.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,13 +160,14 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib;SDL3_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib;SDL3_image.lib;SDL3_ttf.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y "$(ProjectDir)lib\x64\SDL3.dll" "$(OutDir)" &amp; copy /Y "$(ProjectDir)lib\x64\SDL3_image.dll" "$(OutDir)"</Command>
@@ -316,9 +324,10 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="Characters\SubCharacters\Character_Koopa.cpp" />
     <ClCompile Include="Characters\SubCharacters\Character_Luigi.cpp" />
     <ClCompile Include="Characters\SubCharacters\Character_Mario.cpp" />
-    <ClCompile Include="commons\Texture2D.cpp">
+    <ClCompile Include="Components\ACE_Animator.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Disabled</Optimization>
@@ -393,6 +402,158 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="Components\ACE_Sprite2D.cpp">
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>true</SupportJustMyCode>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>x64\Debug\</AssemblerListingLocation>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>x64\Debug\</BrowseInformationFile>
+      <CompileAs>Default</CompileAs>
+      <ConformanceMode>true</ConformanceMode>
+      <DiagnosticsFormat>Column</DiagnosticsFormat>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableASAN>false</EnableASAN>
+      <EnableFuzzer>false</EnableFuzzer>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <EnableVectorLength>NotSet</EnableVectorLength>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <GenerateModuleDependencies>false</GenerateModuleDependencies>
+      <GenerateSourceDependencies>false</GenerateSourceDependencies>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ModuleDependenciesFile>x64\Debug\</ModuleDependenciesFile>
+      <ModuleOutputFile>x64\Debug\</ModuleOutputFile>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ObjectFileName>x64\Debug\</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ProgramDataBaseFileName>x64\Debug\vc143.pdb</ProgramDataBaseFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>x64\Debug\SDL_Engine.pch</PrecompiledHeaderOutputFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ShowIncludes>false</ShowIncludes>
+      <SourceDependenciesFile>x64\Debug\</SourceDependenciesFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <SpectreMitigation>false</SpectreMitigation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <TrackerLogDirectory>x64\Debug\SDL_Engine.tlog\</TrackerLogDirectory>
+      <TranslateIncludes>false</TranslateIncludes>
+      <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>true</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <XMLDocumentationFileName>x64\Debug\</XMLDocumentationFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntelJCCErratum>false</IntelJCCErratum>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
+      <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_UNICODE;UNICODE;</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <LinkCompiled>true</LinkCompiled>
+    </ClCompile>
+    <ClCompile Include="Components\ACE_TextRenderer.cpp" />
+    <ClCompile Include="Components\ACE_Texture2D.cpp">
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>true</SupportJustMyCode>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>x64\Debug\</AssemblerListingLocation>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>x64\Debug\</BrowseInformationFile>
+      <CompileAs>Default</CompileAs>
+      <ConformanceMode>true</ConformanceMode>
+      <DiagnosticsFormat>Column</DiagnosticsFormat>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableASAN>false</EnableASAN>
+      <EnableFuzzer>false</EnableFuzzer>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <EnableVectorLength>NotSet</EnableVectorLength>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <GenerateModuleDependencies>false</GenerateModuleDependencies>
+      <GenerateSourceDependencies>false</GenerateSourceDependencies>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ModuleDependenciesFile>x64\Debug\</ModuleDependenciesFile>
+      <ModuleOutputFile>x64\Debug\</ModuleOutputFile>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ObjectFileName>x64\Debug\</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ProgramDataBaseFileName>x64\Debug\vc143.pdb</ProgramDataBaseFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>x64\Debug\SDL_Engine.pch</PrecompiledHeaderOutputFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ShowIncludes>false</ShowIncludes>
+      <SourceDependenciesFile>x64\Debug\</SourceDependenciesFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <SpectreMitigation>false</SpectreMitigation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <TrackerLogDirectory>x64\Debug\SDL_Engine.tlog\</TrackerLogDirectory>
+      <TranslateIncludes>false</TranslateIncludes>
+      <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>true</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <XMLDocumentationFileName>x64\Debug\</XMLDocumentationFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntelJCCErratum>false</IntelJCCErratum>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
+      <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_UNICODE;UNICODE;</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <LinkCompiled>true</LinkCompiled>
+    </ClCompile>
+    <ClCompile Include="ACE_EventManager.cpp" />
     <ClCompile Include="Managers\ACE_WindowManager.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -468,8 +629,9 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
-    <ClCompile Include="Managers\CollisionManager.cpp" />
-    <ClCompile Include="Managers\GameScreenManager.cpp">
+    <ClCompile Include="Managers\ACE_AudioManager.cpp" />
+    <ClCompile Include="Managers\ACE_CollisionManager.cpp" />
+    <ClCompile Include="Managers\ACE_GameScreenManager.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Disabled</Optimization>
@@ -544,7 +706,8 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
-    <ClCompile Include="Managers\LevelMap.cpp" />
+    <ClCompile Include="Managers\ACE_LevelMap.cpp" />
+    <ClCompile Include="Objects\Coin.cpp" />
     <ClCompile Include="Objects\POW_Block.cpp" />
     <ClCompile Include="Screens\GameScreen.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
@@ -697,11 +860,35 @@
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
     <ClCompile Include="Screens\SubScreens\GameScreen_L2.cpp" />
-    <ClCompile Include="Sprite2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="audio\Mario.mp3" />
-    <Content Include="audio\MarioUnderworld.mp3" />
+    <Content Include="Audio\Mario.mp3" />
+    <Content Include="Audio\Mario.wav" />
+    <Content Include="Audio\MarioUnderworld.mp3" />
+    <Content Include="Audio\Music\smb_gameover.wav" />
+    <Content Include="Audio\Music\smb_mariodie.wav" />
+    <Content Include="Audio\Music\smb_stage_clear.wav" />
+    <Content Include="Audio\Music\smb_warning.wav" />
+    <Content Include="Audio\Music\smb_world_clear.wav" />
+    <Content Include="Audio\Sounds\smb_1-up.wav" />
+    <Content Include="Audio\Sounds\smb_bowserfalls.wav" />
+    <Content Include="Audio\Sounds\smb_bowserfire.wav" />
+    <Content Include="Audio\Sounds\smb_breakblock.wav" />
+    <Content Include="Audio\Sounds\smb_bump.wav" />
+    <Content Include="Audio\Sounds\smb_coin.wav" />
+    <Content Include="Audio\Sounds\smb_fireball.wav" />
+    <Content Include="Audio\Sounds\smb_fireworks.wav" />
+    <Content Include="Audio\Sounds\smb_flagpole.wav" />
+    <Content Include="Audio\Sounds\smb_jump-small.wav" />
+    <Content Include="Audio\Sounds\smb_jump-super.wav" />
+    <Content Include="Audio\Sounds\smb_kick.wav" />
+    <Content Include="Audio\Sounds\smb_pause.wav" />
+    <Content Include="Audio\Sounds\smb_pipe.wav" />
+    <Content Include="Audio\Sounds\smb_powerup.wav" />
+    <Content Include="Audio\Sounds\smb_powerup_appears.wav" />
+    <Content Include="Audio\Sounds\smb_stomp.wav" />
+    <Content Include="Audio\Sounds\smb_vine.wav" />
+    <Content Include="Fonts\JetBrainsMono.ttf" />
     <Content Include="images\BackgroundMB.png" />
     <Content Include="images\Coin.png" />
     <Content Include="images\Koopa.png" />
@@ -734,18 +921,26 @@
     <Content Include="lib\x64\SDL3_image.lib" />
     <Content Include="lib\x64\SDL3_image.pdb" />
     <Content Include="lib\x64\SDL3_test.lib" />
+    <Content Include="lib\x64\SDL3_ttf.dll" />
+    <Content Include="lib\x64\SDL3_ttf.lib" />
+    <Content Include="lib\x64\SDL3_ttf.pdb" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Characters\Character.h" />
+    <ClInclude Include="Characters\SubCharacters\Character_Koopa.h" />
     <ClInclude Include="Characters\SubCharacters\Character_Luigi.h" />
     <ClInclude Include="Characters\SubCharacters\Character_Mario.h" />
-    <ClInclude Include="commons\Box2D.h" />
-    <ClInclude Include="commons\Circle2D.h" />
-    <ClInclude Include="commons\Color.h" />
-    <ClInclude Include="commons\constants.h" />
-    <ClInclude Include="commons\Line2D.h" />
-    <ClInclude Include="commons\Texture2D.h" />
-    <ClInclude Include="commons\Vector2D.h" />
+    <ClInclude Include="Commons\ACE_Box2D.h" />
+    <ClInclude Include="Commons\ACE_Circle2D.h" />
+    <ClInclude Include="Commons\ACE_Color.h" />
+    <ClInclude Include="Commons\ACE_Constants.h" />
+    <ClInclude Include="Commons\ACE_Line2D.h" />
+    <ClInclude Include="Commons\ACE_Vector2D.h" />
+    <ClInclude Include="Components\ACE_Animator.h" />
+    <ClInclude Include="Components\ACE_Sprite2D.h" />
+    <ClInclude Include="Components\ACE_TextRenderer.h" />
+    <ClInclude Include="Components\ACE_Texture2D.h" />
+    <ClInclude Include="ACE_EventManager.h" />
     <ClInclude Include="include\SDL3\SDL.h" />
     <ClInclude Include="include\SDL3\SDL_assert.h" />
     <ClInclude Include="include\SDL3\SDL_asyncio.h" />
@@ -832,15 +1027,20 @@
     <ClInclude Include="include\SDL3\SDL_video.h" />
     <ClInclude Include="include\SDL3\SDL_vulkan.h" />
     <ClInclude Include="include\SDL3_image\SDL_image.h" />
+    <ClInclude Include="include\SDL3_ttf\SDL_ttf.h" />
     <ClInclude Include="Managers\ACE_WindowManager.h" />
-    <ClInclude Include="Managers\CollisionManager.h" />
-    <ClInclude Include="Managers\GameScreenManager.h" />
-    <ClInclude Include="Managers\LevelMap.h" />
+    <ClInclude Include="Managers\ACE_AudioManager.h" />
+    <ClInclude Include="Managers\ACE_CollisionManager.h" />
+    <ClInclude Include="Managers\ACE_GameScreenManager.h" />
+    <ClInclude Include="Managers\ACE_LevelMap.h" />
+    <ClInclude Include="Objects\Coin.h" />
     <ClInclude Include="Objects\POW_Block.h" />
     <ClInclude Include="Screens\GameScreen.h" />
     <ClInclude Include="Screens\SubScreens\GameScreen_L1.h" />
     <ClInclude Include="Screens\SubScreens\GameScreen_L2.h" />
-    <ClInclude Include="Sprite2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="..\..\..\..\My Files\Downloads\SDL3_ttf-devel-3.1.0-VC\SDL3_ttf-3.1.0\lib\x64\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

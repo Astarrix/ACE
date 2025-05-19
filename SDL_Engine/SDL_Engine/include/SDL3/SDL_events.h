@@ -227,9 +227,9 @@ typedef enum SDL_EventType
     SDL_EVENT_DROP_POSITION,             /**< Position while moving over the window */
 
     /* Audio hotplug events */
-    SDL_EVENT_AUDIO_DEVICE_ADDED = 0x1100,  /**< A new audio device is available */
-    SDL_EVENT_AUDIO_DEVICE_REMOVED,         /**< An audio device has been removed. */
-    SDL_EVENT_AUDIO_DEVICE_FORMAT_CHANGED,  /**< An audio device's format has been changed by the system. */
+    SDL_EVENT_AUDIO_DEVICE_ADDED = 0x1100,  /**< A new Audio device is available */
+    SDL_EVENT_AUDIO_DEVICE_REMOVED,         /**< An Audio device has been removed. */
+    SDL_EVENT_AUDIO_DEVICE_FORMAT_CHANGED,  /**< An Audio device's format has been changed by the system. */
 
     /* Sensor events */
     SDL_EVENT_SENSOR_UPDATE = 0x1200,     /**< A sensor was updated */

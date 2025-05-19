@@ -10,7 +10,7 @@ public:
     virtual void Update(float deltaTime, SDL_Event* event);
 protected:
     SDL_Renderer* renderer;
-    void DoScreenShake();
+    virtual void DoScreenShake();
     bool screenshake;
     float backgroundYPos;
 private:

@@ -302,7 +302,7 @@ extern "C" {
  * standard "main" function, you should not supply this.
  *
  * This function is called by SDL once, at startup. The function should
- * initialize whatever is necessary, possibly create windows and open audio
+ * initialize whatever is necessary, possibly create windows and open Audio
  * devices, etc. The `argc` and `argv` parameters work like they would with a
  * standard "main" function.
  *

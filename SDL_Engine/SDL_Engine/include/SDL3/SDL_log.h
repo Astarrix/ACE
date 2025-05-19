@@ -38,7 +38,7 @@
  * applications.
  *
  * The category can be a numeric category, one of "app", "error", "assert",
- * "system", "audio", "video", "render", "input", "test", or `*` for any
+ * "system", "Audio", "video", "render", "input", "test", or `*` for any
  * unspecified category.
  *
  * The level can be a numeric level, one of "trace", "verbose", "debug",
