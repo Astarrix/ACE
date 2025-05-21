@@ -23,10 +23,10 @@ public:
 	void LoadSpriteSheetFromFile(SpriteData data, int inCurrentRow = 0, int inCurrentColumn = 0);
 	void RenderSprite(ACE_Vector2D position, SDL_FlipMode flip = SDL_FLIP_NONE);
 	void SetSpriteIndex(int spriteIndex);
-	float GetSpriteWidth() {return spriteWidth;}
-	float GetSpriteHeight() {return spriteHeight;}
+	float GetSpriteWidth() const {return spriteWidth;}
+	float GetSpriteHeight() const {return spriteHeight;}
 	void PrintSpriteInfo();
-	bool IsInitialised() {return isInitialised;}
+	bool IsInitialised() const {return isInitialised;}
 protected:
 	SDL_Renderer* renderer;
 	

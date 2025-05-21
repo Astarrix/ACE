@@ -8,105 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21ce3860-45fe-4082-89ec-23f85dcab7e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/ACE_EventManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/ACE_EventManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Mario.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Music/smb_gameover.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Music/smb_mariodie.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Music/smb_stage_clear.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Music/smb_warning.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Music/smb_world_clear.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_1-up.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_bowserfalls.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_bowserfire.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_breakblock.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_bump.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_coin.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_fireball.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_fireworks.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_flagpole.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_jump-small.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_jump-super.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_kick.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_pause.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_pipe.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_powerup.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_powerup_appears.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_stomp.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Sounds/smb_vine.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Koopa.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Koopa.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Commons/ACE_Circle2D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Commons/ACE_Color.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Animator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Animator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_TextRenderer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_TextRenderer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Fonts/JetBrainsMono.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_AudioManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_AudioManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Objects/Coin.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/Objects/Coin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3_ttf/SDL_ttf.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL_Engine/lib/x64/SDL3_ttf.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/dictionaries/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Commons/ACE_Transform2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/ACE_Object.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/ACE_Object.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Actor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Actor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/ACE_Component.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/ACE_Component.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Sprite2D.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Sprite2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Texture2D.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Texture2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_GameMode.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_GameMode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_WindowManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_WindowManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Maps/ACE_Map.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Maps/ACE_Map.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/References/ACE Class Diagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/ACE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/ACE.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Characters/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Characters/Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Characters/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Characters/Character.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Luigi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Luigi.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Luigi.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Luigi.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Mario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Mario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Mario.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Characters/SubCharacters/Character_Mario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_WindowManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/CollisionManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_CollisionManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/CollisionManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_CollisionManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/GameScreenManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_GameScreenManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/GameScreenManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_GameScreenManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/LevelMap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_LevelMap.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/LevelMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_LevelMap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Objects/POW_Block.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Objects/POW_Block.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Objects/POW_Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Objects/POW_Block.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/SDL_Engine.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/GameScreen.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L1.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Screens/SubScreens/GameScreen_L2.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Sprite2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Sprite2D.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/Sprite2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Sprite2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/audio/Mario.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Audio/Mario.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/audio/MarioUnderworld.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Audio/MarioUnderworld.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Box2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Commons/ACE_Box2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Circle2D.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Color.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Line2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Commons/ACE_Line2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Texture2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Texture2D.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Texture2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Texture2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/Vector2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Commons/ACE_Vector2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/commons/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Commons/ACE_Constants.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_audio.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_audio.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_camera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_events.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_events.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_hints.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_hints.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_init.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_log.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_log.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_main.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/include/SDL3/SDL_main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/Cl.items.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.secondary.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/SDL_Engine.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/x64/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/SDL_Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/SDL_Engine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Sprite2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Components/ACE_Sprite2D.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +91,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -288,6 +209,16 @@
       <workItem from="1747521457095" duration="1763000" />
       <workItem from="1747566056432" duration="17000" />
       <workItem from="1747653805861" duration="281000" />
+      <workItem from="1747656597566" duration="100000" />
+      <workItem from="1747656793463" duration="97000" />
+      <workItem from="1747681667110" duration="570000" />
+      <workItem from="1747747123386" duration="159000" />
+      <workItem from="1747747440315" duration="1808000" />
+      <workItem from="1747769198550" duration="226000" />
+      <workItem from="1747770123382" duration="177000" />
+      <workItem from="1747770785765" duration="297000" />
+      <workItem from="1747772058597" duration="2502000" />
+      <workItem from="1747832375178" duration="5265000" />
     </task>
     <task id="LOCAL-00001" summary="sprite rendering and debug draws">
       <option name="closed" value="true" />
