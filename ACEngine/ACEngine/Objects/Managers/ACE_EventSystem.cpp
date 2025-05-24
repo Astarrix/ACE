@@ -34,6 +34,15 @@ void ACE_EventSystem::Unsubscribe(ACE_EventType type, EventCallback callback) //
 	);
 }
 
+/*EXAMPLE USAGE
+ACE_Event jumpEvent
+{
+	.type = ACE_EventType::Custom,
+	.data = this,
+	.customType = "CharacterJump"
+};
+ACE_EventSystem::Instance()->Dispatch(jumpEvent);
+*/
 void ACE_EventSystem::Dispatch(const ACE_Event& event)
 {
 	if (event.type == ACE_EventType::Custom) // if its a custom event (defined in the event data)

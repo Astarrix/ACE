@@ -1,6 +1,6 @@
 #include "ACE_Actor.h"
 
-#include "Objects/Managers/ACE_WindowManager.h"
+
 
 ACE_Actor::ACE_Actor(const char* spritePath)
 {
@@ -21,11 +21,37 @@ ACE_Actor::~ACE_Actor()
 
 void ACE_Actor::Update(float deltaTime, SDL_Event event)
 {
-	ACE_Object::Update(deltaTime, event);;
-	for (ACE_Component* component : this->components)
+	ACE_Object::Update(deltaTime, event);
+
+	if (hasGravity)
 	{
-		component->Update(deltaTime, event);
+		AddGravity(deltaTime);
 	}
+
+	float currentDrag = isGrounded ? groundDragCoefficient : skyDragCoefficient;
+	
+	velocity += acceleration * deltaTime;
+	
+	if (maxVelocity.x > 0)
+	{
+		velocity.x = std::clamp(velocity.x, -maxVelocity.x, maxVelocity.x);
+	}
+	if (maxVelocity.y > 0)
+	{
+		velocity.y = std::clamp(velocity.y, -maxVelocity.y, maxVelocity.y);
+	}
+	velocity.x *= currentDrag;
+	transform.position += velocity * deltaTime;
+	acceleration = 0.0f;
+
+	if ((GetBoundingBox().y + GetBoundingBox().height) > 1080)
+	{
+		isGrounded = true;
+		transform.position.y = 1080 - GetBoundingBox().height;
+		velocity.y = 0.0f;
+	}
+	
+	UpdateComponents(deltaTime, event);
 }
 
 void ACE_Actor::Init()
@@ -34,7 +60,8 @@ void ACE_Actor::Init()
 	if (spriteData.path != nullptr)
 	{
 		InitComponents();
-	} else
+	}
+	else
 	{
 		std::cout << "ACTOR HAS NO IMAGE PATH ATTACHED" << "\n";
 	}
@@ -59,7 +86,16 @@ void ACE_Actor::UpdateComponents(float deltaTime, SDL_Event event)
 	}
 }
 
+void ACE_Actor::AddGravity(float deltaTime)
+{
+	if (!isGrounded)
+	{
+		acceleration.y += GRAVITY * mass;
+	}
+}
+
 void ACE_Actor::Render(SDL_Renderer* renderer)
 {
-	spriteComponent->RenderSprite();
+	SDL_FlipMode flip = velocity.x < 0 ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
+	spriteComponent->RenderSprite(flip);
 }

@@ -40,7 +40,7 @@ bool ACE_Texture2D::LoadTextureFromFile(SDL_Renderer* inRenderer, const char* fi
 	return texture != nullptr;
 }
 
-void ACE_Texture2D::Render()
+void ACE_Texture2D::Render(SDL_FlipMode flip)
 {
 	const SDL_FRect l_renderLocation =
 		{
@@ -49,19 +49,19 @@ void ACE_Texture2D::Render()
 		float(parent->GetTransform().scale.x * texWidth),
 		float(parent->GetTransform().scale.y * texHeight)
 		};
-	SDL_RenderTextureRotated(renderer, texture, nullptr, &l_renderLocation, parent->GetTransform().angle, nullptr, SDL_FLIP_NONE);
+	SDL_RenderTextureRotated(renderer, texture, nullptr, &l_renderLocation, parent->GetTransform().angle, nullptr, flip);
 }
 
-void ACE_Texture2D::RenderPortion(SDL_FRect portion)
+void ACE_Texture2D::RenderPortion(SDL_FRect portion, SDL_FlipMode flip)
 {
 	const SDL_FRect l_renderLocation =
 	{
 		float(parent->GetTransform().position.x),
 		float(parent->GetTransform().position.y),
-		float(parent->GetTransform().scale.x * texWidth),
-		float(parent->GetTransform().scale.y * texHeight)
+		float(parent->GetTransform().scale.x * portion.w),
+		float(parent->GetTransform().scale.y * portion.h)
 	};
-	SDL_RenderTextureRotated(renderer, texture, &portion, &l_renderLocation, parent->GetTransform().angle, nullptr, SDL_FLIP_NONE);
+	SDL_RenderTextureRotated(renderer, texture, &portion, &l_renderLocation, parent->GetTransform().angle, nullptr, flip);
 }
 
 void ACE_Texture2D::FreeTexture()

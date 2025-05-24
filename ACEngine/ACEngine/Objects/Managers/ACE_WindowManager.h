@@ -18,6 +18,7 @@ public:
 
 	void Update(std::function<void(float, SDL_Event)> callback, float deltaTime, SDL_Event event);
 	void Render(std::function<void(SDL_Renderer*)> callback, SDL_Renderer* renderer);
+
 	
 private:
 	ACE_WindowManager() = default;
@@ -26,4 +27,5 @@ private:
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	const char* initTitle = "ACEngine";
+	int ScreenWidth, ScreenHeight;
 };

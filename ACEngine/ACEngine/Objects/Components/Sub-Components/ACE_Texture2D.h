@@ -10,8 +10,8 @@ public:
 	~ACE_Texture2D() override;
 
 	bool LoadTextureFromFile(SDL_Renderer* inRenderer, const char* fileName);
-	void Render();
-	void RenderPortion(SDL_FRect portion);
+	void Render(SDL_FlipMode flip = SDL_FLIP_NONE);
+	void RenderPortion(SDL_FRect portion, SDL_FlipMode flip = SDL_FLIP_NONE);
 
 	int GetTextureWidth() const {return texWidth;}
 	int GetTextureHeight() const {return texHeight;}

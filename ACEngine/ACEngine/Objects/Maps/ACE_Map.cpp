@@ -1,6 +1,7 @@
 #include "ACE_Map.h"
 
 #include "Objects/Actors/ACE_Character.h"
+#include "Objects/Actors/ACE_Player.h"
 #include "Objects/Managers/ACE_EventSystem.h"
 
 
@@ -34,31 +35,8 @@ void ACE_Map::Render(SDL_Renderer* renderer)
 void ACE_Map::Init()
 {
 	ACE_Object::Init();
-	ACE_Character* newActor = new ACE_Character();
-	ACE_Transform2D newTransform =
-	{
-		0,
-		0,
-		1,
-		1,
-		0
-	};
-	SpawnActor(newTransform, newActor);
-
-	ACE_EventSystem::Instance()->Subscribe(
-		"CharacterJump",
-		[this](const ACE_Event& event)
-		{
-			ACE_Character* character = (ACE_Character*)(event.data);
-			ACE_Transform2D newTransform =
-			{
-				int(character->GetTransform().position.x),
-				int(character->GetTransform().position.y + 20)
-			};
-			character->SetTransform(newTransform);
-		}
-	);
-
+	ACE_Player* newActor = new ACE_Player();
+	SpawnActor(newActor->GetTransform(), newActor);
 	InitActors();
 }
 

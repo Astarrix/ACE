@@ -1,5 +1,6 @@
-#include "Commons/ACE_Vector2D.h"
+#pragma once
 #include "Objects/Components/Sub-Components/ACE_Texture2D.h"
+#include "Commons/ACE_Vector2D.h"
 
 struct SpriteData
 {
@@ -19,10 +20,9 @@ class ACE_Sprite2D : public ACE_Texture2D
 {
 public:
 	ACE_Sprite2D() = default;
-	~ACE_Sprite2D() override;
 
 	void LoadSpriteSheetFromFile(SDL_Renderer* inRenderer, SpriteData data, int inCurrentRow = 0, int inCurrentColumn = 0);
-	void RenderSprite();
+	void RenderSprite(SDL_FlipMode flip = SDL_FLIP_NONE);
 	
 	void SetSpriteIndex(int spriteIndex);
 	

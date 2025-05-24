@@ -1,10 +1,6 @@
 #include "ACE_Sprite2D.h"
 
-#include <filesystem>
 
-ACE_Sprite2D::~ACE_Sprite2D()
-{
-}
 
 void ACE_Sprite2D::LoadSpriteSheetFromFile(SDL_Renderer* inRenderer, SpriteData data, int inCurrentRow, int inCurrentColumn)
 {
@@ -30,7 +26,7 @@ void ACE_Sprite2D::LoadSpriteSheetFromFile(SDL_Renderer* inRenderer, SpriteData 
 	isInitialised = true;
 }
 
-void ACE_Sprite2D::RenderSprite()
+void ACE_Sprite2D::RenderSprite(SDL_FlipMode flip)
 {
 	SDL_FRect portion =
 		{
@@ -39,7 +35,7 @@ void ACE_Sprite2D::RenderSprite()
 			float(spriteWidth),
 			float(spriteHeight)
 		};
-	RenderPortion(portion);
+	RenderPortion(portion, flip);
 }
 
 void ACE_Sprite2D::SetSpriteIndex(int spriteIndex)
