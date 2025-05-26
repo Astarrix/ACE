@@ -8,7 +8,7 @@ public:
 	virtual ~ACE_Object() = default;
 	virtual void Init();
 	virtual void Update(float deltaTime, SDL_Event event);
-protected:
 	const char* friendlyName = "Default-Object";
+protected:
 private:
 };

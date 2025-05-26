@@ -8,22 +8,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21ce3860-45fe-4082-89ec-23f85dcab7e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Player.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Player.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_HealthComponent.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_HealthComponent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Tile.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Tile.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Animator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Animator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_AudioManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_AudioManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_TextRenderer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_TextRenderer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_CollisionManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_CollisionManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/ACE_Object.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/ACE_Object.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Actor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Actor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Actor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Actor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Character.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Character.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Texture2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Components/Sub-Components/ACE_Texture2D.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_EventSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_EventSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_EventSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_EventSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Actors/ACE_Player.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_WindowManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_WindowManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_WindowManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Managers/ACE_WindowManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Maps/ACE_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Maps/ACE_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Maps/ACE_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ACEngine/ACEngine/Objects/Maps/ACE_Map.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL_Engine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_CollisionManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL_Engine/Managers/ACE_CollisionManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +225,9 @@
       <workItem from="1747871140654" duration="1474000" />
       <workItem from="1747905664092" duration="3095000" />
       <workItem from="1748086466314" duration="470000" />
+      <workItem from="1748093652896" duration="1552000" />
+      <workItem from="1748120542970" duration="826000" />
+      <workItem from="1748264474237" duration="1711000" />
     </task>
     <task id="LOCAL-00001" summary="sprite rendering and debug draws">
       <option name="closed" value="true" />

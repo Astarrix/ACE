@@ -15,7 +15,7 @@ void ACE_Character::Init()
 	ACE_Actor::Init();
 	ACE_EventSystem::Instance()->Subscribe(BindCustomCallback("CharacterDied")
 	{
-		if ((ACE_Character*)event.data == this)
+		if ((ACE_Character*)event.dataBuffer_1 == this)
 		{
 			OnDied(event);
 		}
@@ -27,17 +27,18 @@ void ACE_Character::Update(float deltaTime, SDL_Event event)
 	ACE_Actor::Update(deltaTime, event);
 }
 
-void ACE_Character::Move(ACE_Vector2D direction, float deltaTime)
+void ACE_Character::Move(ACE_Vector2D direction)
 {
-	velocity.x += direction.x * moveSpeed;
+	SetVelocity(ACE_Vector2D(GetVelocity().x + direction.x * moveSpeed, GetVelocity().y));
 }
 
 void ACE_Character::Jump(float JumpForce)
 {
-	if (isGrounded)
+	if (IsGrounded())
 	{
-		velocity.y -= JumpForce;
-		isGrounded = false;
+		//std::cout << "Jumped" << std::endl;
+		SetVelocity(ACE_Vector2D(GetVelocity().x, -JumpForce));
+		SetIsGrounded(false);
 	}
 }
 

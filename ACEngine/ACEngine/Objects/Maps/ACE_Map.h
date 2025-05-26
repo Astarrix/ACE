@@ -15,7 +15,6 @@ public:
 	void Init() override;
 private:
 	std::vector<ACE_Actor*> actors;
-	void InitActors();
 	void UpdateActors(float deltaTime, SDL_Event event);
 	void RenderActors(SDL_Renderer* renderer);
 };

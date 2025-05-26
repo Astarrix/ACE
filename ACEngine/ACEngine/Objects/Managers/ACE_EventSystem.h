@@ -7,6 +7,7 @@
 enum class ACE_EventType
 {
 	Input,
+	UI,
 	Collision,
 	ActorSpawned,
 	ActorDestroyed,
@@ -17,7 +18,9 @@ enum class ACE_EventType
 struct ACE_Event
 {
 	ACE_EventType type;
-	void* data;
+	void* dataBuffer_1;
+	void* dataBuffer_2;
+	void* dataBuffer_3;
 	std::string customType; 
 };
 

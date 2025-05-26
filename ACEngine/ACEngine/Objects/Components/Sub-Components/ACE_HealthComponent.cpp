@@ -16,7 +16,7 @@ void ACE_HealthComponent::TakeDamage(float healthLost)
 	health = std::clamp(health - healthLost, 0.0f, maxHealth);
 	if (health <= 0.0f)
 	{
-		ACE_Event OnDied{ACE_EventType::Custom, parent, "CharacterDied"};
+		ACE_Event OnDied{ACE_EventType::Custom, parent, nullptr, nullptr,"CharacterDied"};
 		ACE_EventSystem::Instance()->Dispatch(OnDied);
 	}
 }

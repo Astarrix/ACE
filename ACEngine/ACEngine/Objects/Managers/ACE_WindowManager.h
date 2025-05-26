@@ -1,6 +1,7 @@
 #pragma once
 #include <functional>
 
+#include "Commons/ACE_Vector2D.h"
 #include "Objects/ACE_Object.h"
 #include "SDL3/SDL.h"
 
@@ -18,8 +19,8 @@ public:
 
 	void Update(std::function<void(float, SDL_Event)> callback, float deltaTime, SDL_Event event);
 	void Render(std::function<void(SDL_Renderer*)> callback, SDL_Renderer* renderer);
-
 	
+	ACE_Vector2D GetWindowSize() const;
 private:
 	ACE_WindowManager() = default;
 	static ACE_WindowManager* instance;

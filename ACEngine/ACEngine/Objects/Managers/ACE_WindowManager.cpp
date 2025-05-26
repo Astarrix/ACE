@@ -61,3 +61,11 @@ void ACE_WindowManager::Render(std::function<void(SDL_Renderer*)> callback, SDL_
 	callback(inRenderer);
 	SDL_RenderPresent(inRenderer);
 }
+
+ACE_Vector2D ACE_WindowManager::GetWindowSize() const
+{
+	int windowWidth = 0;
+	int windowHeight = 0;
+	SDL_GetRenderOutputSize(renderer, &windowWidth, &windowHeight);
+	return ACE_Vector2D(int(windowWidth), int(windowHeight));
+}

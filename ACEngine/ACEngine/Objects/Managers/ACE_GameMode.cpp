@@ -16,11 +16,13 @@ void ACE_GameMode::Update(float deltaTime, SDL_Event event)
 {
 	ACE_Object::Update(deltaTime, event);
 	UpdateMap(deltaTime, event);
+	//UpdateUI(deltaTime, event)
 }
 
 void ACE_GameMode::Render(SDL_Renderer* renderer)
 {
 	RenderMap(renderer);
+	// RenderUI(renderer)
 }
 
 void ACE_GameMode::GameBegin(ACE_Map* startMap)

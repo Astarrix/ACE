@@ -30,7 +30,7 @@ bool ACE_CollisionManager::CheckCollision(ACE_Box2D box1, ACE_Box2D box2)
 {
 	return box1.Overlaps(box2);
 }
-
+	
 ACE_CollisionManager::ACE_CollisionManager()
 {
 }
