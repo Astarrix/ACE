@@ -70,7 +70,7 @@ void ACE_CollisionManager::CheckAllCollisions()
 
 					ACE_Event HitEvent
 					{
-						ACE_EventType::Collision,
+						.type = ACE_EventType::Collision,
 						.dataBuffer_1 = &hit,
 					};
 				
