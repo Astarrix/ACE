@@ -71,10 +71,7 @@ void ACE_CollisionManager::CheckAllCollisions()
 					ACE_Event HitEvent
 					{
 						ACE_EventType::Collision,
-						&hit,
-						nullptr,
-						nullptr,
-						""
+						.dataBuffer_1 = &hit,
 					};
 				
 					ACE_EventSystem::Instance()->Dispatch(HitEvent);

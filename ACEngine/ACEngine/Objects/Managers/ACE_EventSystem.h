@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 
+#include "Objects/ACE_Object.h"
+
 enum class ACE_EventType
 {
 	Input,
@@ -18,10 +20,11 @@ enum class ACE_EventType
 struct ACE_Event
 {
 	ACE_EventType type;
-	void* dataBuffer_1;
-	void* dataBuffer_2;
-	void* dataBuffer_3;
-	std::string customType; 
+	ACE_Object* target = nullptr;
+	void* dataBuffer_1 = nullptr;
+	void* dataBuffer_2 = nullptr;
+	void* dataBuffer_3 = nullptr;
+	std::string customType = "CustomEventTypeName"; 
 };
 
 class ACE_EventSystem

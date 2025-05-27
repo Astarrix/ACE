@@ -8,8 +8,8 @@
 enum ACE_UIVISIBILITYTYPE
 {
 	HIDDEN,
-	VISIBLE,
-	NOTHITTESTABLE,
+	INTERACTIBLE,
+	RENDERED,
 };
 
 class ACE_UIElement : ACE_Object
@@ -20,23 +20,23 @@ public:
 	void Update(float deltaTime, SDL_Event event) override;
 	void SetScreenPosition(ACE_Vector2D newPosition);
 	void SetLocalPosition(ACE_Vector2D newPosition);
-	ACE_Vector2D GetScreenPosition();
+	ACE_Vector2D GetScreenPosition() const { return {screenBounds.x, screenBounds.y}; }
 	ACE_Vector2D GetLocalPosition();
 	void SetVisibility(ACE_UIVISIBILITYTYPE newVisibility);
-	ACE_UIVISIBILITYTYPE GetVisibility();
-	
+	ACE_UIVISIBILITYTYPE GetVisibility() const;
+
 protected:
 	virtual void OnClick();
 	virtual void OnHover();
 	virtual void OnUnhover();
 	void AddChild(ACE_UIElement* child);
 	void RemoveChild(ACE_UIElement* child);
-	
+
 private:
-	ACE_Box2D localBounds;
+	ACE_Box2D screenBounds;
 	ACE_UIElement* parent = nullptr;
 	std::vector<ACE_UIElement*> children;
-	ACE_UIVISIBILITYTYPE visibility = VISIBLE;
+	ACE_UIVISIBILITYTYPE visibility = RENDERED;
 	int zOrder = 0;
 	bool isHovered = false;
 	bool isClicked = false;

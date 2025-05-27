@@ -16,12 +16,10 @@ private:
 	float maxHealth = 100.0f;
 	float health = maxHealth;
 
-	ACE_Event OnHealed
+	ACE_Event OnHealed = 
 	{
-		ACE_EventType::Custom,
-		parent,
-		nullptr,
-		nullptr,
-		"CharacterHealed"
+		.type = ACE_EventType::Custom,
+		.target = (ACE_Object*)parent,
+		.customType = "CharacterHealed"
 	};
 };
